@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,8 +25,8 @@ namespace Exam.Page_Object_Model
         [FindsBy(How = How.XPath, Using = "//*[@id='container']/div/div[1]/div[1]/div[2]/div[2]/form/div/button")]
         public IWebElement Search_btn;
 
-        [FindsBy(How = How.ClassName, Using = "//*[@id='container']/div/div[3]/div[1]/div[2]/div[2]/div/div/div/a")]
-        public IWebElement Select;
+        [FindsBy(How = How.ClassName, Using = "//*[@Class='_4rR01T']")]
+        public IList<IWebElement> Select;
 
         [FindsBy(How = How.XPath, Using = "")]
         public IWebElement AddToCart_btn;
@@ -37,7 +38,10 @@ namespace Exam.Page_Object_Model
         {
             Search.SendKeys("Mobile");
             Search_btn.Click();
-            Select.Click();
+            foreach( var i in Select) { 
+                i.Click();
+            }
+
             
 
 

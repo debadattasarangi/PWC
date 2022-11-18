@@ -50,19 +50,19 @@ namespace Exam.Support
             {
                 case ("Chrome"):
                     driver = new ChromeDriver();
-                    driver.Navigate().GoToUrl("https://www.flipkart.com/");
+                    driver.Navigate().GoToUrl("https://www.amazon.in/ref=nav_logo");
                     driver.Manage().Window.Maximize();
                     Wait(); 
                     break;
                 case ("Edge"):
                     driver = new EdgeDriver();
-                    driver.Navigate().GoToUrl("https://www.flipkart.com/");
+                    driver.Navigate().GoToUrl("https://www.amazon.in/ref=nav_logo");
                     driver.Manage().Window.Maximize();
                     Wait();
                     break;
                 default:
                     driver = new ChromeDriver();
-                    driver.Navigate().GoToUrl("https://www.flipkart.com/");
+                    driver.Navigate().GoToUrl("https://www.amazon.in/ref=nav_logo");
                     driver.Manage().Window.Maximize();
                     Wait();
                     break;

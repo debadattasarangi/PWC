@@ -19,5 +19,14 @@ namespace Exam
             Wait();
            
         }
+
+        [Test, Category("Amazon")]
+        public void Test2()
+        {
+            Amazon tc1 = new Amazon(driver);
+            tc1.Add_To_Cart();
+
+
+        }
     }
 }
