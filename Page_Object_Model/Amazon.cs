@@ -28,7 +28,7 @@ namespace Exam.Page_Object_Model
         [FindsBy(How = How.XPath, Using = "//*[@id='a - autoid - 14 - announce' or @value='9']")]
         public IWebElement Shoes_size;
 
-        [FindsBy(How = How.XPath, Using = "///*[@id=add-to-cart-button]")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='add-to-cart-button']")]
         public IWebElement Add_To_Cart_btn;
 
         public void Add_To_Cart()
@@ -45,22 +45,25 @@ namespace Exam.Page_Object_Model
             foreach (var s in result)
             {
                 string s2=s.Text;
+                Console.WriteLine(s2);
                 
                 
             }
             result[1].Click();
-            //var child = driver.CurrentWindowHandle;
+            var child = driver.CurrentWindowHandle;
             var window_details=driver.WindowHandles;
-            //foreach(var i in window_details)
-            //{
-            //    if (i != child)
-            //    {
-            //        driver.SwitchTo().Window(i);
-            //        break;
-            //    }
-            //}
-            driver.SwitchTo().Window(window_details[1]);
+            foreach (var i in window_details)
+            {
+                if (i != child)
+                {
+                    driver.SwitchTo().Window(i);
+                    break;
+                }
+            }
+            //driver.SwitchTo().Window(window_details[1]);
+            
             Add_To_Cart_btn.Click();
+
 
     }
 

@@ -50,7 +50,7 @@ namespace Exam.Support
             {
                 case ("Chrome"):
                     driver = new ChromeDriver();
-                    driver.Navigate().GoToUrl("https://www.amazon.in/ref=nav_logo");
+                    driver.Navigate().GoToUrl("https://www.makemytrip.com/");
                     driver.Manage().Window.Maximize();
                     Wait(); 
                     break;
@@ -62,7 +62,7 @@ namespace Exam.Support
                     break;
                 default:
                     driver = new ChromeDriver();
-                    driver.Navigate().GoToUrl("https://www.amazon.in/ref=nav_logo");
+                    driver.Navigate().GoToUrl("https://www.makemytrip.com/");
                     driver.Manage().Window.Maximize();
                     Wait();
                     break;
